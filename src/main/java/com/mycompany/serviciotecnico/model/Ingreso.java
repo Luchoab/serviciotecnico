@@ -1,46 +1,46 @@
 package com.mycompany.serviciotecnico.model;
 
-import java.math.BigDecimal;
-import java.util.Date;
+import com.mycompany.serviciotecnico.model.MetodoPago;
+import java.sql.Date;
 
 public class Ingreso {
-    private int id_ingreso;
-    private BigDecimal monto;
+
+    private int idIngreso;
+    private double monto;
     private String descripcion;
     private Date fecha;
-    private int id_cliente;
-    private int id_servicio_realizado;
-    private BigDecimal costo_servicio;
-    private String metodo_pago;
+    private int idCliente;
+    private int idServicioRealizado;
+    private double costoServicio;
+    private MetodoPago metodoPago;  // Aquí cambia el tipo a Enum
 
-    // Constructor
-    public Ingreso(int id_ingreso, BigDecimal monto, String descripcion, Date fecha, 
-                   int id_cliente, int id_servicio_realizado, BigDecimal costo_servicio, 
-                   String metodo_pago) {
-        this.id_ingreso = id_ingreso;
+    public Ingreso(){};
+    // Constructor con el Enum MetodoPago
+    public Ingreso(int idIngreso, double monto, String descripcion, Date fecha, int idCliente, int idServicioRealizado, double costoServicio, MetodoPago metodoPago) {
+        this.idIngreso = idIngreso;
         this.monto = monto;
         this.descripcion = descripcion;
         this.fecha = fecha;
-        this.id_cliente = id_cliente;
-        this.id_servicio_realizado = id_servicio_realizado;
-        this.costo_servicio = costo_servicio;
-        this.metodo_pago = metodo_pago;
+        this.idCliente = idCliente;
+        this.idServicioRealizado = idServicioRealizado;
+        this.costoServicio = costoServicio;
+        this.metodoPago = metodoPago;
     }
 
     // Getters y setters
-    public int getId_ingreso() {
-        return id_ingreso;
+    public int getIdIngreso() {
+        return idIngreso;
     }
 
-    public void setId_ingreso(int id_ingreso) {
-        this.id_ingreso = id_ingreso;
+    public void setIdIngreso(int idIngreso) {
+        this.idIngreso = idIngreso;
     }
 
-    public BigDecimal getMonto() {
+    public double getMonto() {
         return monto;
     }
 
-    public void setMonto(BigDecimal monto) {
+    public void setMonto(double monto) {
         this.monto = monto;
     }
 
@@ -60,35 +60,35 @@ public class Ingreso {
         this.fecha = fecha;
     }
 
-    public int getId_cliente() {
-        return id_cliente;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setId_cliente(int id_cliente) {
-        this.id_cliente = id_cliente;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
-    public int getId_servicio_realizado() {
-        return id_servicio_realizado;
+    public int getIdServicioRealizado() {
+        return idServicioRealizado;
     }
 
-    public void setId_servicio_realizado(int id_servicio_realizado) {
-        this.id_servicio_realizado = id_servicio_realizado;
+    public void setIdServicioRealizado(int idServicioRealizado) {
+        this.idServicioRealizado = idServicioRealizado;
     }
 
-    public BigDecimal getCosto_servicio() {
-        return costo_servicio;
+    public double getCostoServicio() {
+        return costoServicio;
     }
 
-    public void setCosto_servicio(BigDecimal costo_servicio) {
-        this.costo_servicio = costo_servicio;
+    public void setCostoServicio(double costoServicio) {
+        this.costoServicio = costoServicio;
     }
 
-    public String getMetodo_pago() {
-        return metodo_pago;
+    public MetodoPago getMetodoPago() {
+        return metodoPago;
     }
 
-    public void setMetodo_pago(String metodo_pago) {
-        this.metodo_pago = metodo_pago;
+    public void setMetodoPago(MetodoPago metodoPago) {
+        this.metodoPago = metodoPago;
     }
 }

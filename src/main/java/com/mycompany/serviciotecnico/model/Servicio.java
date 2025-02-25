@@ -1,7 +1,8 @@
 package com.mycompany.serviciotecnico.model;
 
 public class Servicio {
-    private int idServicio;  // id_servicio (clave primaria)
+    private int idServicio;
+    private String nombre;
     private String descripcion; // descripcion del servicio
     private double costo;      // costo del servicio
 
@@ -9,10 +10,19 @@ public class Servicio {
     public Servicio() {}
 
     // Constructor con parámetros
-    public Servicio(int idServicio, String descripcion, double costo) {
+    public Servicio(int idServicio, String descripcion, double costo, String nombre) {
         this.idServicio = idServicio;
         this.descripcion = descripcion;
         this.costo = costo;
+        this.nombre = nombre;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     // Getters y Setters

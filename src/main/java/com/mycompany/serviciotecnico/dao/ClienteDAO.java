@@ -36,9 +36,11 @@ public class ClienteDAO {
 
     public List<Cliente> getAll() {
         List<Cliente> clientes = new ArrayList<>();
-        String sql = "SELECT * FROM Clientes";
+        String sql = "SELECT * FROM clientes";
 
-        try (Connection con = DatabaseConnection.getConnection(); Statement stmt = con.createStatement(); ResultSet rs = stmt.executeQuery(sql)) {
+        try (Connection con = DatabaseConnection.getConnection();
+                Statement stmt = con.createStatement();
+                ResultSet rs = stmt.executeQuery(sql)) {
 
             while (rs.next()) {
                 Cliente cliente = new Cliente();
