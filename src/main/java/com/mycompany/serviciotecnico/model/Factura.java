@@ -4,70 +4,33 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 public class Factura {
-    private int id_factura;
-    private int id_cliente;
-    private int id_servicio_realizado;
-    private Date fecha_emision;
+    private int idFactura;
+    private int idCliente;
+    private int idServicioRealizado;
+    private Date fechaEmision;
     private BigDecimal total;
-    private String estado;
+    private EstadoFactura estado;
 
-    // Constructor
-    public Factura(int id_factura, int id_cliente, int id_servicio_realizado, Date fecha_emision, 
-                   BigDecimal total, String estado) {
-        this.id_factura = id_factura;
-        this.id_cliente = id_cliente;
-        this.id_servicio_realizado = id_servicio_realizado;
-        this.fecha_emision = fecha_emision;
+    public Factura(int idFactura, int idCliente, int idServicioRealizado, Date fechaEmision, BigDecimal total, EstadoFactura estado) {
+        this.idFactura = idFactura;
+        this.idCliente = idCliente;
+        this.idServicioRealizado = idServicioRealizado;
+        this.fechaEmision = fechaEmision;
         this.total = total;
         this.estado = estado;
     }
 
-    // Getters y setters
-    public int getId_factura() {
-        return id_factura;
-    }
-
-    public void setId_factura(int id_factura) {
-        this.id_factura = id_factura;
-    }
-
-    public int getId_cliente() {
-        return id_cliente;
-    }
-
-    public void setId_cliente(int id_cliente) {
-        this.id_cliente = id_cliente;
-    }
-
-    public int getId_servicio_realizado() {
-        return id_servicio_realizado;
-    }
-
-    public void setId_servicio_realizado(int id_servicio_realizado) {
-        this.id_servicio_realizado = id_servicio_realizado;
-    }
-
-    public Date getFecha_emision() {
-        return fecha_emision;
-    }
-
-    public void setFecha_emision(Date fecha_emision) {
-        this.fecha_emision = fecha_emision;
-    }
-
-    public BigDecimal getTotal() {
-        return total;
-    }
-
-    public void setTotal(BigDecimal total) {
-        this.total = total;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
+    // Getters y Setters
+    public int getIdFactura() { return idFactura; }
+    public void setIdFactura(int idFactura) { this.idFactura = idFactura; }
+    public int getIdCliente() { return idCliente; }
+    public void setIdCliente(int idCliente) { this.idCliente = idCliente; }
+    public int getIdServicioRealizado() { return idServicioRealizado; }
+    public void setIdServicioRealizado(int idServicioRealizado) { this.idServicioRealizado = idServicioRealizado; }
+    public Date getFechaEmision() { return fechaEmision; }
+    public void setFechaEmision(Date fechaEmision) { this.fechaEmision = fechaEmision; }
+    public BigDecimal getTotal() { return total; }
+    public void setTotal(BigDecimal total) { this.total = total; }
+    public EstadoFactura getEstado() { return estado; }
+    public void setEstado(EstadoFactura estado) { this.estado = estado; }
 }

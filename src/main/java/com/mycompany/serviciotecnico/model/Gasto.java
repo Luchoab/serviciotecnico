@@ -1,7 +1,7 @@
 package com.mycompany.serviciotecnico.model;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.sql.Date;
 
 public class Gasto {
     private int id_gasto;
@@ -10,11 +10,12 @@ public class Gasto {
     private Date fecha;
     private String categoria;
     private String proveedor;
-    private String metodo_pago;
+    private MetodoPago metodo_pago;
 
+    public Gasto(){}
     // Constructor
     public Gasto(int id_gasto, BigDecimal monto, String descripcion, Date fecha, 
-                 String categoria, String proveedor, String metodo_pago) {
+                 String categoria, String proveedor, MetodoPago metodo_pago) {
         this.id_gasto = id_gasto;
         this.monto = monto;
         this.descripcion = descripcion;
@@ -73,11 +74,11 @@ public class Gasto {
         this.proveedor = proveedor;
     }
 
-    public String getMetodo_pago() {
+    public MetodoPago getMetodo_pago() {
         return metodo_pago;
     }
 
-    public void setMetodo_pago(String metodo_pago) {
+    public void setMetodo_pago(MetodoPago metodo_pago) {
         this.metodo_pago = metodo_pago;
     }
 }
